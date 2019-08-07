@@ -24,6 +24,7 @@
 Mu-Editor provides easy way code and compile python source codes for BBC Micro:bit.
 To see the installation instruction of it, click [here](https://codewith.mu/en/download).
 > Make sure that **BBC Micro:bit** mode is selected in the Mu-Editor.
+> Mu-Editor prefers tabs for intendation
 1. Connect BBC Micro:bit to computer via USB
 2. Open code in Mu-Editor
 3. Flash it on the micro:bit

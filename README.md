@@ -5,6 +5,7 @@
 **Software Requirements**
 - Python 3.6.7
 - Keras 2.2.4
+- Tensorflow 1.13.1
 - Microfs 1.3.1
 - Mu-Editor 1.0.2
 - Pyserial 3.4
@@ -61,7 +62,7 @@ depending on the code complexitiy.
 4. Now all the data are moved to the *RAW_Data* directory in following subdirectory *{movement_name} {date} {time}* 
 ---
 **Processing the raw data**
-1. On the terminal, run the command ```python "src/Read Microbit.py" --data "RAW_Data" --width 13 --normalize true``` to look for data in *RAW_Data* directory, use moving average window of *13* and normalize the values between 0-1
+1. On the terminal, run the command ```python "src/Process Data.py" --data "RAW_Data" --width 13 --normalize true``` to look for data in *RAW_Data* directory, use moving average window of *13* and normalize the values between 0-1
 2. The processed data from all collected raw data will be in *Processed Data {date} {time}.csv* file.
 ---
 **Train and test model**

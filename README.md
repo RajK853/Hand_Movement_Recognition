@@ -2,8 +2,7 @@
  Classify hand movements (up, down, left, right, ideal) from a BBC Micro:bit by analysing the x, y and z plane acceleration readings.
 
 ## Installation
-**Requirements**
-Software:
+**Software Requirements**
 - Python 3.6.7
 - Keras 2.2.4
 - Microfs 1.3.1
@@ -14,7 +13,7 @@ Software:
 - Matplotlib 2.2.2
 - Scikit-learn 0.20.
 
-Hardware:
+**Hardware Requirements**
 - 2 BBC Micro:bits
 - 2 USB Type A to Micro B 5-pin cables
 

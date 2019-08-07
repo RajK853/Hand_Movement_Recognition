@@ -21,9 +21,9 @@
 ## Compiling source code to BBC Micro:bit
 **Using Mu-Editor**
 
-Mu-Editor provides easy way code and compile python source codes for BBC Micro:bit.
+Mu-Editor provides easy way code and compile python source codes for BBC Micro:bit.  
 To see the installation instruction of it, click [here](https://codewith.mu/en/download).
-> Make sure that **BBC Micro:bit** mode is selected in the Mu-Editor.
+> Make sure that **BBC Micro:bit** mode is selected in the Mu-Editor.  
 > Mu-Editor prefers tabs for intendation
 1. Connect BBC Micro:bit to computer via USB
 2. Open code in Mu-Editor
@@ -31,11 +31,9 @@ To see the installation instruction of it, click [here](https://codewith.mu/en/d
 ---
 **Using online editor**
 
-There are several online editors to code and compile source codes for BBC Micro:bit.
-This [official website](https://microbit.org/code/) provides online python editor to compile the code.
-
-However, I prefer this [site](https://create.withcode.uk/) as it also let's you simulate your code 
-depending on the code complexitiy.
+There are several online editors to code and compile source codes for BBC Micro:bit.  
+This [official website](https://microbit.org/code/) provides online python editor to compile the code.  
+This [site](https://create.withcode.uk/) also let's you simulate your code depending on the code complexitiy.
 > The USB cable should support data transfer
 1. Write python code in a online editor
 2. Download the hex file
@@ -63,7 +61,8 @@ depending on the code complexitiy.
 4. Now all the data are moved to the *RAW_Data* directory in following subdirectory *{movement_name} {date} {time}* 
 ---
 **Processing the raw data**
-1. On the terminal, run the command ```python "src/Process Data.py" --data "RAW_Data" --width 13 --normalize true``` to look for data in *RAW_Data* directory, use moving average window of *13* and normalize the values between 0-1
+1. On the terminal, run the command ```python "src/Process Data.py" --data "RAW_Data" --width 13 --normalize true```  
+to look for data in *RAW_Data* directory, use moving average window of *13* and normalize the values between 0-1
 2. The processed data from all collected raw data will be in *Processed Data {date} {time}.csv* file.
 ---
 **Train and test model**
@@ -82,5 +81,6 @@ depending on the code complexitiy.
 6. In one cell, the program waits for data from receiver mircro:bit via USB
 7. Press button A in the sender micro:bit to start countdown
 8. Perform the hand movement
-9. The transmitter sends an end token at the end of transmission and the receiver displays a tick sign when it receives it. Press button B on transmitter if the end token was lost and not received by the receiver
+9. The transmitter sends an end token at the end of transmission and the receiver displays a tick sign when it receives it.  
+Press button B on transmitter if the end token was lost and not received by the receiver
 10. Run remaining cells in Jupyter Notebook to process the data, plot its graph and display the predicted movement.

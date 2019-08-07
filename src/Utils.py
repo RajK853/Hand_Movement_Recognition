@@ -69,6 +69,21 @@ def pad_constant(array, max_length, pad_pos="end"):
     array = np.pad(array, padWidth, mode="constant", constant_values=padValue)
     return array
 
+def execute_layers(inputs, layers):
+    """
+    Computes each input to all given layers and returns their outputs in a list
+    @param inputs : List of inputs to be passed through the given layer(s)
+    @param layers : List of layers though which each input will be passed
+    @return       : List of output generated from each input
+    """
+    outputs = []
+    for _input in inputs:
+        _output = _input
+        for layer in layers:
+            _output = layer(_output)
+        outputs.append(_output)
+    return outputs
+
 def load_processed_data(f_name, review_length, pad_pos="end", train_ratio=0.75):
     """
     Loads acceleration data from processed file

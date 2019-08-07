@@ -13,8 +13,8 @@ SAMPLE_PERIOD   = const(10)                                                 # Sa
 SAMPLE_DURATION = const(1500)                                               # Total sample time in ms
 ACK             = const("0")
 NACK            = const("1")
-# LED Numbers; 3, 2, 1 
-NUM_IMGS = const([Image("90909:90909:90909:99999:99999"), 
+# LED Numbers; 3, 2, 1
+NUM_IMGS = const([Image("90909:90909:90909:99999:99999"),
                   Image("99909:90909:90909:90909:90999"),
                   Image("00000:00090:99999:99999:00000")])
 
@@ -95,7 +95,7 @@ def main():
                     sleep(0 if (SAMPLE_PERIOD-t_diff)<0 else SAMPLE_PERIOD-t_diff)
             data_sent += 1
             if (data_num-data_sent)>0:
-                state = READY_TO_SAMPLE  
+                state = READY_TO_SAMPLE
             else:
                 state = EXIT
         # State 3

@@ -26,7 +26,7 @@ To see the installation instruction of it, click [here](https://codewith.mu/en/d
 1. Connect BBC Micro:bit to computer via USB
 2. Open code in Mu-Editor
 3. Flash it on the micro:bit
-
+---
 **Using online editor**
 
 There are several online editors to code and compile source codes for BBC Micro:bit.
@@ -53,23 +53,23 @@ depending on the code complexitiy.
 10. Press button B to check remaining number of data to collect
 12. Repeat steps 5-9 to collect further data
 13. Once all data is collected, a smiley face will be displayed
-
+---
 **Data transfer from BBC Micro:bit to computer**
 1. Plug in the Micro:bit via USB to the computer
 2. On the terminal, run the command ```python "src/Read Microbit.py"```
 3. Enter the name of the movement data collected in the BBC Micro:bit
 4. Now all the data are moved to the *RAW_Data* directory in following subdirectory *{movement_name} {date} {time}* 
-
+---
 **Processing the raw data**
 1. On the terminal, run the command ```python "src/Read Microbit.py" --data "RAW_Data" --width 13 --normalize true``` to look for data in *RAW_Data* directory, use moving average window of *13* and normalize the values between 0-1
 2. The processed data from all collected raw data will be in *Processed Data {date} {time}.csv* file.
-
+---
 **Train and test model**
 1. Open the *Train Gesture Reader.ipynb* in Jupyter Notebook
 2. Select a processed file for training and testing the model
 3. Give threshold accuracy to save the trained model
 4. Run all the cells
-
+---
 **Test trained model**
 > Recommended to power both micro:bit via USB
 1. Flash “src/Data Sender.py” in one BBC Micro:bit and “src/Data Receiver.py” in another one.

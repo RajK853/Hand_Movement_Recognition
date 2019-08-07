@@ -14,12 +14,28 @@
 - Scikit-learn 0.20.3
 
 ## Usage
-> Make sure that **BBC Micro:bit** mode is selected in the Mu-Editor.
+### Compiling source code to BBC Micro:bit
+**Using Mu-Editor**
+Mu-Editor provides easy way code and compile python source codes for BBC Micro:bit.
+To see the installation instruction of it, click [here](https://codewith.mu/en/download).
+1. Connect BBC Micro:bit to computer via USB
+2. Open code in Mu-Editor > Make sure that **BBC Micro:bit** mode is selected in the Mu-Editor.
+3. Flash it on the micro:bit
+
+**Using online editor**
+There are several online editors to code and compile source codes for BBC Micro:bit.
+This [official website](https://microbit.org/code/) provides online python editor to compile the code.
+However, I prefer this [site](https://create.withcode.uk/) as it also let's you simulate your code 
+depending on the code complexitiy.
+1. Write python code in a online editor
+2. Download the hex file
+4. Connect BBC Micro:bit to computer via USB > Make sure the USB cable supports data transfer
+3. Paste the hex file to the micro:bit hard drive
+
 
 **Data collection in BBC Micro:bit**
 1. Plug in a Micro:bit via USB to the computer
-2. Load the source code from *src/Collect Data.py* in Mu-Editor
-3. Flash it on the Micro:bit
+2. Flash the source code *src/Collect Data.py* on the Micro:bit
 4. Restart the Micro:bit
 5. Hold the Micro:bit such that the buttons are on top and button B points away from you
 6. Select number of data to collect by pressing button A and B (max 14 data)
@@ -32,7 +48,6 @@
 
 **Data transfer from BBC Micro:bit to computer**
 1. Plug in the BBC Micro:bit via USB to the computer
-2. On the terminal, run the command 
-```python "src/Read Microbit.py"```
+2. On the terminal, run the command ```python "src/Read Microbit.py"```
 3. Enter the name of the movement data collected in the BBC Micro:bit
-4. Now all the data are moved to the *RAW_Data* directory in following subdirectory ```Name given at step 3``` ```Date``` ```Time``` 
+4. Now all the data are moved to the *RAW_Data* directory in following subdirectory ```NAME_FROM_STEP_3 Date Time``` 

@@ -18,10 +18,7 @@ def main():
     name = name.capitalize() if name else "Unnamed"
     # Create sub-directory in RAW_Data directory 
     dir_name = os.path.join("RAW_Data", "{} {}".format(name, datetime.now().strftime("%d %m %Y %H-%M")))
-    try:
-        os.makedirs(dir_name)                                                       # Make the sub-directory if it doesn't exist                                            
-    except OSError:
-        pass
+    os.makedirs(dir_name, exist_ok=True)                                            # Make the sub-directory if it doesn't exist
     print()
     for i, file in enumerate(csv_files):
         print(" Progress: {:<50}  ({}/{})".format("█"*int(50*(i+1)/len(csv_files)), i+1, len(csv_files)), end="\r")
